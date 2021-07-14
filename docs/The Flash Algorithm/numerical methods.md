@@ -25,13 +25,12 @@ $$
 Interestingly this has been shown to be a form of gradient descent. This is described in [Ammar 1987](https://doi.org/10.1002/aic.690330606). The Jacobian can be calculated analytically, and the Hessian semi-analytically, in terms of the residual Gibbs energy with respect to the mole number.
 
 $$
-\nabla g = \frac{\partial g}{\partial v_i} = \ln\left(\frac{y_i\phi_i^V}{x_i\phi_i^L}\right)\\~\\
-
-\nabla^2 g = \mathbf{A} + \mathbf{Q}\\~\\
-
-\mathbf{A} = \frac{1}{\beta(1-\beta)}\left(-1 + \delta_{ij}\frac{z_i}{x_iy_i}\right)\\
-
-\mathbf{Q} = \frac{\partial \ln \phi+i^V}{\partial v_j} + \frac{\partial \ln \phi_i^L}{\partial l_j}
+\begin{align*}
+\nabla g &= \frac{\partial g}{\partial v_i} = \ln\left(\frac{y_i\phi_i^V}{x_i\phi_i^L}\right)\\~\\
+\nabla^2 g &= \mathbf{A} + \mathbf{Q}\\~\\
+\mathbf{A} &= \frac{1}{\beta(1-\beta)}\left(-1 + \delta_{ij}\frac{z_i}{x_iy_i}\right)\\
+\mathbf{Q} &= \frac{\partial \ln \phi+i^V}{\partial v_j} + \frac{\partial \ln \phi_i^L}{\partial l_j}
+\end{align*}
 $$
 
 where $\delta_{ij}$ is the [kronecker delta](https://en.wikipedia.org/wiki/Kronecker_delta), and the mole numbers $\beta = \sum_i^N v_i$
