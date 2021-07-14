@@ -3,7 +3,8 @@ layout: default
 title: main
 parent: Flash UROP
 has_children: false
-nav_order: 0
+nav_order: 1
+math: mathjax3
 ---
 
 # The Flash Problem
