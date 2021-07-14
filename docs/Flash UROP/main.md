@@ -24,14 +24,19 @@ There are 2 key equations that are solved iteratively, the chosen equation of st
 ### The Rachford-Rice equation
 
 The Rachford-Rice equation has at most one solution for $\beta$ that guaranties all $x_i, y_i$ are positive. It is easy and efficient to use a step limited Newton-Raphson method to solve this, as the derivative is easy to obtain analytically.
-$$\sum_i \frac{z_i(K_i-1)}{1+\beta(K_i-1)} = 0\\
-h(\beta) = \sum_{i=1}^N \frac{K_i - 1}{(K_i-1)\beta + 1}\\
-h'(\beta) = - \sum_{i=1}^N \left(\frac{K_i - 1}{(K_i-1)\beta + 1}\right)^2z_i \\
-\beta_{k+1} = \beta_k - \frac{h}{h'}$$
+
+$$\sum_i \frac{z_i(K_i-1)}{1+\beta(K_i-1)} = 0$$
+$$
+\begin{align*} 
+h(\beta) =& \sum_{i=1}^N \frac{K_i - 1}{(K_i-1)\beta + 1}\\
+h'(\beta) =& - \sum_{i=1}^N \left(\frac{K_i - 1}{(K_i-1)\beta + 1}\right)^2z_i \\
+\beta_{k+1} =& \beta_k - \frac{h}{h'}
+\end{align*}$$
 
 Checking each iteration if $\beta_{k+1}$ exceeds a defined $\beta_{max}, \beta_{min}$. These maximum and minimum values can either be described in terms of your component equilibrium constants, or as $[0, 1]$. The former is known as the "negative flash" procedure, and is described in [Curtis, 1989](http://dx.doi.org/10.1016/0378-3812(89)80072-X). It allows for calculations of equilibrium compositions for systems that physically exist as a single phase, and corresponds to a saddle point in the Gibbs energy surface. It is an important tool when used in the inner $\beta$ loop in a larger iterative flash procedure. 
 
 Once this is solved, $\vec{x}, \vec{y}$ can be calculated as:
+
 $$\begin{align*} x_i &= \dfrac{z_i}{1+\beta(K_i-1)}\\ y_i &= K_i x_i \end{align*}$$
 
 ### The Equation of State
