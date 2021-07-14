@@ -23,7 +23,7 @@ There are 2 key equations that are solved iteratively, the chosen equation of st
 
 ### The Rachford-Rice equation
 
-The Rachford-Rice equation has at most one solution for \(\beta\) that guaranties all $x_i, y_i$ are positive. It is easy and efficient to use a step limited Newton-Raphson method to solve this, as the derivative is easy to obtain analytically.
+The Rachford-Rice equation has at most one solution for $\beta$ that guaranties all $x_i, y_i$ are positive. It is easy and efficient to use a step limited Newton-Raphson method to solve this, as the derivative is easy to obtain analytically.
 
 $$\sum_i \frac{z_i(K_i-1)}{1+\beta(K_i-1)} = 0$$
 $$
