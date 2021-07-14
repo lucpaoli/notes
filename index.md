@@ -12,4 +12,6 @@ Hi, these are my notes from my Chemical Engineering degree and other stuff.
 
 This site uses the theme ["Just the Docs" by Patrick Marsceill](https://github.com/pmarsceill/just-the-docs)
 
+$$\LaTeX$$
+
 
