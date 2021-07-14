@@ -13,6 +13,7 @@ The most basic method of solving a flash problem is by successive substitution o
 
 The basic implementation involves calculating the liquid and vapour fugacities from an initial guess of the compositions, then writing the expression for the compositions from the material balance and definition of the equilibrium constant.
 
+### Substitution algorithm:
 $$
 \begin{align*}
 K_i &= \frac{\phi_i^L(x)}{\phi_i^V(y)}\\
@@ -25,14 +26,14 @@ Interestingly this has been shown to be a form of gradient descent. This is desc
 
 $$
 \nabla g = \frac{\partial g}{\partial v_i} = \ln\left(\frac{y_i\phi_i^V}{x_i\phi_i^L}\right)\\~\\
-\nabla^2 g = \bold{A} + \bold{Q}\\~\\
-\bold{A} = \frac{1}{\beta(1-\beta)}\left(-1 + \delta_{ij}\frac{z_i}{x_iy_i}\right)\\~\\
-\bold{Q} = \frac{\partial \ln \phi+i^V}{\partial v_j} + \frac{\partial \ln \phi_i^L}{\partial l_j}
+\nabla^2 g = \mathbf{A} + \mathbf{Q}\\~\\
+\mathbf{A} = \frac{1}{\beta(1-\beta)}\left(-1 + \delta_{ij}\frac{z_i}{x_iy_i}\right)\\
+\mathbf{Q} = \frac{\partial \ln \phi+i^V}{\partial v_j} + \frac{\partial \ln \phi_i^L}{\partial l_j}
 $$
 
 where $\delta_{ij}$ is the [kronecker delta](https://en.wikipedia.org/wiki/Kronecker_delta), and the mole numbers $\beta = \sum_i^N v_i$
 
-### Iterative algorithm:
+### Gradient algorithm:
 
 
 1.  Start with $\ln K$
