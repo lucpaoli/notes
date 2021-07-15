@@ -19,13 +19,13 @@ The basic implementation involves calculating the liquid and vapour fugacities f
 3.  Compute $\phi^V_i, \phi^L_i$
 4.  Iterate with the equal fugacity constraint
 
-    $$
-    \begin{align*}
-    K_i &= \frac{\phi_i^L(x)}{\phi_i^V(y)}\\
-    x_{i,k+1} &= \frac{z_i}{1+\beta(K_i-1)}\\
-    y_{i, k+1} &= \frac{z_i}{1+\beta(K_i-1)}\\
-    \end{align*}
-    $$
+$$
+\begin{align*}
+K_i &= \frac{\phi_i^L(x)}{\phi_i^V(y)}\\
+x_{i,k+1} &= \frac{z_i}{1+\beta(K_i-1)}\\
+y_{i, k+1} &= \frac{z_i}{1+\beta(K_i-1)}\\
+\end{align*}
+$$
 
 Interestingly this has been shown to be a form of gradient descent. This is described in [Ammar 1987](https://doi.org/10.1002/aic.690330606). The Jacobian can be calculated analytically, and the Hessian semi-analytically, in terms of the residual Gibbs energy with respect to the mole number.
 
