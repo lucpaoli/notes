@@ -34,7 +34,7 @@ $$
 \nabla g &= \frac{\partial g}{\partial v_i} = \ln\left(\frac{y_i\phi_i^V}{x_i\phi_i^L}\right)\\~\\
 \nabla^2 g &= \mathbf{A} + \mathbf{Q}\\~\\
 \mathbf{A} &= \frac{1}{\beta(1-\beta)}\left(-1 + \delta_{ij}\frac{z_i}{x_iy_i}\right)\\~\\
-\mathbf{Q} &= \frac{\partial \ln \phi+i^V}{\partial v_j} + \frac{\partial \ln \phi_i^L}{\partial l_j}
+\mathbf{Q} &= \frac{\partial \ln \phi_i^V}{\partial v_j} + \frac{\partial \ln \phi_i^L}{\partial l_j}
 \end{align*}
 $$
 
@@ -58,4 +58,5 @@ where $\delta_{ij}$ is the [kronecker delta](https://en.wikipedia.org/wiki/Krone
 ## Acceleration steps
 
 Newton's method is effective in a small neighbourhood of the solution, having quadratic convergence. 
+A Newton step can be determined fully numerically, or with the semi-analytic Hessian described above. To solve the  
 
