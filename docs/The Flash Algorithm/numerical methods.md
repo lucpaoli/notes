@@ -14,13 +14,17 @@ The most basic method of solving a flash problem is by successive substitution o
 The basic implementation involves calculating the liquid and vapour fugacities from an initial guess of the compositions, then writing the expression for the compositions from the material balance and definition of the equilibrium constant.
 
 ### Substitution algorithm:
-$$
-\begin{align*}
-K_i &= \frac{\phi_i^L(x)}{\phi_i^V(y)}\\
-x_{i,k+1} &= \frac{z_i}{1+\beta(K_i-1)}\\
-y_{i, k+1} &= \frac{z_i}{1+\beta(K_i-1)}\\
-\end{align*}
-$$
+1.  Start with $x_i, y_i$
+2.  Solve the Rachford-Rice equation
+3.  Compute $\phi^V_i, \phi^L_i$
+4.  Iterate with the equal fugacity constraint
+    $$
+    \begin{align*}
+    K_i &= \frac{\phi_i^L(x)}{\phi_i^V(y)}\\
+    x_{i,k+1} &= \frac{z_i}{1+\beta(K_i-1)}\\
+    y_{i, k+1} &= \frac{z_i}{1+\beta(K_i-1)}\\
+    \end{align*}
+    $$
 
 Interestingly this has been shown to be a form of gradient descent. This is described in [Ammar 1987](https://doi.org/10.1002/aic.690330606). The Jacobian can be calculated analytically, and the Hessian semi-analytically, in terms of the residual Gibbs energy with respect to the mole number.
 
@@ -44,7 +48,7 @@ where $\delta_{ij}$ is the [kronecker delta](https://en.wikipedia.org/wiki/Krone
 4.  Calculated the residual gibbs energy
 5.  Define 
 
-    $\ln K_{k+1} = \ln K_k - \lambda \Delta g$
+    $\ln K_{k+1} = \ln K_k - \lambda \nabla g$
     
     where $\lambda$ is parameter that can be calculated through a line search.
 
