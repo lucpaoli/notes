@@ -18,6 +18,7 @@ The basic implementation involves calculating the liquid and vapour fugacities f
 2.  Solve the Rachford-Rice equation
 3.  Compute $\phi^V_i, \phi^L_i$
 4.  Iterate with the equal fugacity constraint
+
     $$
     \begin{align*}
     K_i &= \frac{\phi_i^L(x)}{\phi_i^V(y)}\\
