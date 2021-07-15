@@ -28,7 +28,7 @@ $$
 \begin{align*}
 \nabla g &= \frac{\partial g}{\partial v_i} = \ln\left(\frac{y_i\phi_i^V}{x_i\phi_i^L}\right)\\~\\
 \nabla^2 g &= \mathbf{A} + \mathbf{Q}\\~\\
-\mathbf{A} &= \frac{1}{\beta(1-\beta)}\left(-1 + \delta_{ij}\frac{z_i}{x_iy_i}\right)\\
+\mathbf{A} &= \frac{1}{\beta(1-\beta)}\left(-1 + \delta_{ij}\frac{z_i}{x_iy_i}\right)\\~\\
 \mathbf{Q} &= \frac{\partial \ln \phi+i^V}{\partial v_j} + \frac{\partial \ln \phi_i^L}{\partial l_j}
 \end{align*}
 $$
