@@ -97,9 +97,11 @@ $$ k_{ij} = 1 - \frac{1}{2\sqrt{a_ia_j}}\left[a_i\frac{b_j}{b_i}+a_j\frac{b_i}{b
 This is not particularly useful, as it means you can't use fitted parameters for that mixing rule from other people. You can rearrange Eq. (1) to (2) and use along with (3) to obtain 2 values of $\tau$ for each binary pair for when you want to obtain the classic mixing rule for more ideal mixtures.
 
 $$\tau_{ij} = \left(\left[(1 - k_{ij})\cdot 2\sqrt{a_ia_j} - a_i\frac{b_j}{b_i} - a_j\frac{b_i}{b_j}\right]\cdot\frac{C}{RT} - b_j\tau_{ji}\right)/b_i \tag{2} $$
+
 $$ \tau_{ji} = \frac{C}{RT}\left[\frac{\sqrt{a_ia_j}(1-k_{ij})}{b_{ij}} - \frac{a_i}{b_j}\right] \tag{3} $$
 
 Another method is possible, where you determine $\tau_{ji}, \tau_{ij}$ from activity coefficients produced by a predictive model such as UNIFAC by solving Eq. (4) simultaneously for both values.
+
 $$\tau_{ji} = \ln\gamma_i^\infty - \tau_{ij}\frac{b_i}{b_j}\exp(-\alpha_{ij}\tau_{ij}) \tag{4}$$
 
 The overall approach is:
