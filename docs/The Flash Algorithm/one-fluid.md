@@ -105,7 +105,6 @@ $$\tau_{ji} = \ln\gamma_i^\infty - \tau_{ij}\frac{b_i}{b_j}\exp(-\alpha_{ij}\tau
 
 The overall approach is:
 
-<center>
 
 | Ideal mixture                        | Nonideal mixture                                         |
 |--------------------------------------|----------------------------------------------------------|
@@ -113,7 +112,6 @@ The overall approach is:
 | $k_{ij}$ regressed                   | $k_{ij} = 0$                                             |
 | $\tau_{ij}$ calculated from (2), (3) | $\tau_{ij}$ regressed or obtained from UNIFAC prediction |
 
-</center>
 
 When regressing $\tau$, temperature dependence is always included, the simplest of which is $\tau = g/T$, where $g$ is the interaction energy for that binary pair.
 More complex temperature dependence does exist but whatever formulation used, the general approach is to fit $\tau$ individually to isotherms and consider temperature dependence after.
