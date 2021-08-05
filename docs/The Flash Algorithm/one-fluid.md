@@ -87,8 +87,8 @@ A key advantage of these mixing rules is that in a mixture it's likely that only
 
 ### Reformulation
 This preserves the same basic equations, but rewrites the cross second virial term as
-$$
-\left(b-\frac{a}{RT}\right)_{ij} = \frac12(b_i+b_j)-\frac{\sqrt{a_i}a_j(1-k_{ij})}{RT}$$
+
+$$\left(b-\frac{a}{RT}\right)_{ij} = \frac12(b_i+b_j)-\frac{\sqrt{a_i}a_j(1-k_{ij})}{RT}$$
 
 When using this rule, if you set $\tau_{ij}=0$, you recover the van der waals mixing rules for the case where 
 
